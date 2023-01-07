@@ -1,15 +1,25 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import './App.css';
+import Button from './components/Button/Button';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div>
-      <h1 className="text-3xl font-bold underline text-green-900">
-        Hello world armani t!
-      </h1>
+      <div className="text-center mt-10 w-[171px] mx-auto">
+        <Button btnType="blue" applyShadow={true}>
+          Get Started
+        </Button>
+      </div>
+      <div className="mt-10 w-[171px] mx-auto relative">
+        <Button btnType="light-blue">Try for Free</Button>
+      </div>
+
+      <div className="mt-10 h-20 text-center bg-primary-blue">
+        <div className="w-[171px] mx-auto pt-3">
+          <Button btnType="white">Try for Free</Button>
+        </div>
+      </div>
     </div>
   );
 }
