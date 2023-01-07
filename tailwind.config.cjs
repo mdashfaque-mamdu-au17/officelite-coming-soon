@@ -6,10 +6,16 @@ module.exports = {
       colors: {
         'primary-blue': '#5175FF',
         'secondary-blue': '#829CFF',
+        'light-blue': '#5175ff26',
+        'light-blue-200': '#5175ff59',
         'primary-dark': '#333950',
         'secondary-dark': '#25293A',
         'primary-gray': '#747B95',
         'primary-red': '#F05B5B',
+        'primary-white': '#FFFFFF',
+      },
+      boxShadow: {
+        'shadow-blue-btn': '0px 25px 25px -10px rgba(63, 91, 194, 0.247159)',
       },
     },
   },
