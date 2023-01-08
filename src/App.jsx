@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from './components/Button/Button';
 import Heading from './components/Texts/Heading';
+import Paragraph from './components/Texts/Paragraph';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -44,6 +45,26 @@ function App() {
         <Heading type="secondary-heading" styles="text-primary-dark">
           Basic
         </Heading>
+      </div>
+
+      <div className="text-center mt-10">
+        <Paragraph type="primary">
+          Say goodbye to inefficient juggling of multiple apps, teams, and
+          projects. Officelite is the new collaboration platform built with an
+          intuitive interface to improve productivity.
+        </Paragraph>
+      </div>
+
+      <div className="text-center mt-10">
+        <Paragraph type="secondary" styles="text-primary-dark">
+          Up to 5 users for free
+        </Paragraph>
+      </div>
+
+      <div className="text-center mt-10">
+        <Paragraph type="secondary" styles="text-primary-gray">
+          Basic document collaboration
+        </Paragraph>
       </div>
     </div>
   );
