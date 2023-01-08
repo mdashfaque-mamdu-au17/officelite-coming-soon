@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from './components/Button/Button';
+import TimeCard from './components/Card/TimeCard';
 import Heading from './components/Texts/Heading';
 import Paragraph from './components/Texts/Paragraph';
 
@@ -65,6 +66,18 @@ function App() {
         <Paragraph type="secondary" styles="text-primary-gray">
           Basic document collaboration
         </Paragraph>
+      </div>
+
+      <div className="text-center mt-10 bg-secondary-dark h-60">
+        <div className="max-w-[700px] mx-auto pt-10">
+          <TimeCard theme={true} time={56} unit="min" />
+        </div>
+      </div>
+
+      <div className="text-center mt-10 bg-[#f2f2f2]">
+        <div className="max-w-[700px] mx-auto pt-10">
+          <TimeCard theme={false} time={56} unit="min" />
+        </div>
       </div>
     </div>
   );
