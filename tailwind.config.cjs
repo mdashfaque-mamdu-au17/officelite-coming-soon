@@ -17,6 +17,7 @@ module.exports = {
       },
       boxShadow: {
         'shadow-blue-btn': '0px 25px 25px -10px rgba(63, 91, 194, 0.247159)',
+        'card-shadow': '0px 50px 50px -25px rgba(75, 92, 154, 0.247159)',
       },
     },
   },
