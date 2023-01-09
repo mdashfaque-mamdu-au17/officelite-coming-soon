@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from './components/Button/Button';
+import PriceCard from './components/Card/PriceCard';
 import TimeCard from './components/Card/TimeCard';
 import Heading from './components/Texts/Heading';
 import Paragraph from './components/Texts/Paragraph';
@@ -79,6 +80,33 @@ function App() {
           <TimeCard theme={false} time={56} unit="min" />
         </div>
       </div>
+
+      {/* price cards */}
+      <div className="mt-10 bg-black py-10 flex justify-center sm:px-6">
+        <PriceCard
+          premium={false}
+          heading="Basic"
+          price="Free"
+          billCycle="Up to 5 users for free"
+          benefit="Basic document collaboration"
+          storage={2}
+          support="Great security and support"
+        />
+      </div>
+
+      <div className="mt-10 mb-10 flex justify-center sm:px-6">
+        <PriceCard
+          premium={true}
+          heading="Pro"
+          price="$9.99"
+          billCycle="Per user, billed monthly"
+          benefit="All essential integrations"
+          storage={50}
+          support="More control and insights"
+        />
+      </div>
+
+      <div>somehting</div>
     </div>
   );
 }
