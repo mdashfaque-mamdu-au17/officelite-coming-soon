@@ -5,7 +5,7 @@ import BGPatters from '../../assets/home/bg-pattern-header.svg';
 const Navbar = () => {
   return (
     <nav className="max-w-[1110px] mx-auto">
-      <div className="relative z-20 pt-[46px] flex justify-center items-center">
+      <div className="relative z-20 pt-[46px] flex justify-center items-center sm:justify-start sm:px-10 xl:px-0">
         <a href="" className="pointer-cursor">
           <img src={Logo} alt="" />
         </a>
