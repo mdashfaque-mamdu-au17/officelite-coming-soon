@@ -23,6 +23,7 @@ body {
   height: 100%;
   background-color: #ffffff;
   position: relative;
+  overflow-x: hidden;
 }
 body {
   line-height: 1.5;
