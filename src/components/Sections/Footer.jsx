@@ -1,5 +1,7 @@
 import React from 'react';
 import PriceCard from '../Card/PriceCard';
+import TimeCard from '../Card/TimeCard';
+import Button from '../Button/Button';
 import FtPattern from '../../assets/home/bg-pattern-footer.svg';
 
 const Footer = () => {
@@ -44,6 +46,31 @@ const Footer = () => {
             className="w-[1202px] h-[1202px] sm:w-[1454px] sm:h-[1454px] lg:w-[2036px] lg:h-[2036px]"
           />
         </div>
+
+        <article className="absolute bottom-[100px]  left-1/2 transform -translate-x-1/2 w-full lg:px-10 xl:px-0 lg:bottom-[91px]">
+          <div className="flex flex-col items-center lg:flex-row lg:justify-between lg:max-w-[1110px] lg:mx-auto">
+            <div className="">
+              <div className="text-center lg:text-left">
+                <h5 className="text-primary-white uppercase text-base font-bold leading-[48px] tracking-[5px]">
+                  Coming <span className="text-primary-blue">4 Nov 2020</span>
+                </h5>
+              </div>
+
+              <div className="flex gap-[13px] pt-[18px] sm:pt-2">
+                <TimeCard theme={true} time={47} unit="days" />
+                <TimeCard theme={true} time={7} unit="hours" />
+                <TimeCard theme={true} time={56} unit="mins" />
+                <TimeCard theme={true} time={14} unit="secs" />
+              </div>
+            </div>
+
+            <div className="w-[171px] pt-10 sm:pt-12">
+              <Button btnType="blue" applyShadow={false}>
+                Get Started
+              </Button>
+            </div>
+          </div>
+        </article>
       </footer>
     </section>
   );
