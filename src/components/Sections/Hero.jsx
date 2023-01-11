@@ -6,7 +6,7 @@ import Illustration from '../../assets/home/illustration-charts.svg';
 
 const Hero = () => {
   return (
-    <section className="max-w-[1110px] mx-auto flex flex-col items-center pt-20 sm:flex-row sm:justify-start sm:gap-[63px] md:gap-[95px] sm:px-10 sm:pt-[101px] sm:pb-[140px] xl:px-0">
+    <section className="max-w-[1110px] mx-auto flex flex-col items-center pt-20 sm:flex-row sm:justify-start sm:gap-[63px] md:gap-[95px] sm:px-10 sm:pt-[101px] sm:pb-[140px] xl:px-0 relative z-20 lg:pb-[184px]">
       <div className="w-[171px] h-[192px] shrink-0 sm:order-1 md:w-[281px] md:h-[314px] xl:w-[475px] xl:h-[531px]">
         <img
           src={Illustration}
