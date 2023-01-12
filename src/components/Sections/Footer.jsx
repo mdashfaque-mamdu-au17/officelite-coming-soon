@@ -3,8 +3,10 @@ import PriceCard from '../Card/PriceCard';
 import TimeCard from '../Card/TimeCard';
 import Button from '../Button/Button';
 import FtPattern from '../../assets/home/bg-pattern-footer.svg';
+import useCountDown from '../../hooks/useCountDown';
 
 const Footer = () => {
+  const { countdownTime, expiryTime } = useCountDown();
   return (
     <section className="relative pt-[794px] sm:pt-[498px] lg:pt-[254px]">
       <section className="absolute top-0 flex flex-col gap-8 w-full  items-center sm:px-10 sm:gap-6 lg:flex-row lg:justify-center xl:gap-[30px]">
@@ -57,10 +59,26 @@ const Footer = () => {
               </div>
 
               <div className="flex gap-[13px] pt-[18px] sm:pt-2">
-                <TimeCard theme={true} time={47} unit="days" />
-                <TimeCard theme={true} time={7} unit="hours" />
-                <TimeCard theme={true} time={56} unit="mins" />
-                <TimeCard theme={true} time={14} unit="secs" />
+                <TimeCard
+                  theme={true}
+                  time={Number(countdownTime.countdownDays)}
+                  unit="days"
+                />
+                <TimeCard
+                  theme={true}
+                  time={Number(countdownTime.countdownHours)}
+                  unit="hours"
+                />
+                <TimeCard
+                  theme={true}
+                  time={Number(countdownTime.countdownMinutes)}
+                  unit="mins"
+                />
+                <TimeCard
+                  theme={true}
+                  time={Number(countdownTime.countdownSeconds)}
+                  unit="secs"
+                />
               </div>
             </div>
 
