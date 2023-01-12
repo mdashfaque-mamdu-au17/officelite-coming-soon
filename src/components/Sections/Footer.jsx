@@ -61,22 +61,22 @@ const Footer = () => {
               <div className="flex gap-[13px] pt-[18px] sm:pt-2">
                 <TimeCard
                   theme={true}
-                  time={Number(countdownTime.countdownDays)}
+                  time={String(countdownTime.countdownDays)}
                   unit="days"
                 />
                 <TimeCard
                   theme={true}
-                  time={Number(countdownTime.countdownHours)}
+                  time={String(countdownTime.countdownHours)}
                   unit="hours"
                 />
                 <TimeCard
                   theme={true}
-                  time={Number(countdownTime.countdownMinutes)}
+                  time={String(countdownTime.countdownMinutes)}
                   unit="mins"
                 />
                 <TimeCard
                   theme={true}
-                  time={Number(countdownTime.countdownSeconds)}
+                  time={String(countdownTime.countdownSeconds)}
                   unit="secs"
                 />
               </div>

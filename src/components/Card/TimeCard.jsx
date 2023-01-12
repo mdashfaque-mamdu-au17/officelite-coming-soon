@@ -30,7 +30,7 @@ const TimeCard = (props) => {
           'text-[32px] leading-[48px] font-bold sm:text-[56px]'
         )}
       >
-        {time}
+        {time < 10 ? 0 + time : time}
       </h4>
       <p
         className={classNames(
@@ -48,7 +48,7 @@ const TimeCard = (props) => {
 
 TimeCard.propTypes = {
   theme: PropTypes.bool.isRequired,
-  time: PropTypes.number.isRequired,
+  time: PropTypes.string.isRequired,
   unit: PropTypes.string.isRequired,
 };
 
