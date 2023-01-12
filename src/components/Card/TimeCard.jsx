@@ -21,29 +21,27 @@ const TimeCard = (props) => {
       className={classNames(
         applyCommonStyle(),
         applyStyle(),
-        'flex justify-center items-center'
+        'flex flex-col items-center justify-center'
       )}
     >
-      <div>
-        <h4
-          className={classNames(
-            theme ? 'text-primary-white' : 'text-primary-blue',
-            'text-[32px] leading-[48px] font-bold sm:text-[56px]'
-          )}
-        >
-          {time}
-        </h4>
-        <p
-          className={classNames(
-            theme
-              ? 'text-primary-white opacity-50'
-              : 'text-primary-dark opacity-50',
-            'font-bold leading-7 text-xs sm:text-base sm:mt-[5px]'
-          )}
-        >
-          {unit}
-        </p>
-      </div>
+      <h4
+        className={classNames(
+          theme ? 'text-primary-white' : 'text-primary-blue',
+          'text-[32px] leading-[48px] font-bold sm:text-[56px]'
+        )}
+      >
+        {time}
+      </h4>
+      <p
+        className={classNames(
+          theme
+            ? 'text-primary-white opacity-50'
+            : 'text-primary-dark opacity-50',
+          'font-bold leading-7 text-xs sm:text-base sm:mt-[5px] text-center'
+        )}
+      >
+        {unit}
+      </p>
     </article>
   );
 };
