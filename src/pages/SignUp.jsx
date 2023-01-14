@@ -2,6 +2,7 @@ import React from 'react';
 import CountDown from '../components/Sections/CountDown';
 import Intro from '../components/Sections/Intro';
 import NavbarSignUp from '../components/Sections/NavbarSignUp';
+import SignupForm from '../components/Sections/SignupForm';
 
 const SignUp = () => {
   return (
@@ -20,7 +21,9 @@ const SignUp = () => {
       </div>
 
       {/* contact form and footer */}
-      <div></div>
+      <div className="mt-20">
+        <SignupForm />
+      </div>
     </section>
   );
 };
