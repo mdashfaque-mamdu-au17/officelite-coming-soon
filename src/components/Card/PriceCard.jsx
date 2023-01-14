@@ -11,7 +11,7 @@ const PriceCard = (props) => {
     props;
 
   const commonStyle = () => {
-    return 'relative z-20 overflow-hidden w-[327px] rounded-[13px] shadow-card-shadow  sm:w-full sm:max-w-[689px] sm:flex sm:justify-between sm:items-center lg:w-[327px] lg:flex-col lg:justify-center';
+    return 'relative z-20 overflow-hidden w-[327px] rounded-[13px] shadow-card-shadow  sm:w-full sm:max-w-[689px] sm:flex sm:justify-between sm:items-center lg:w-[327px] lg:flex-col lg:justify-center xl:w-[350px]';
   };
 
   const applyStyle = () => {
