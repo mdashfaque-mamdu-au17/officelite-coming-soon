@@ -13,7 +13,7 @@ const Navbar = () => {
       <img
         src={BGPatters}
         alt=""
-        className="absolute -z-0 w-[458px] -top-[176px] left-1/2 transform -translate-x-1/2  md:w-[666px] md:-top-[164px]  md:right-0 md:translate-x-0 lg:w-[1134px] lg:-top-[419px] lg:translate-x-40 xl:translate-x-20 object-cover"
+        className="absolute -z-0 w-[458px] -top-[170px] left-1/2 transform -translate-x-1/2  md:w-[666px] md:-top-[164px]  md:right-0 md:translate-x-0 lg:w-[1134px] lg:-top-[419px] lg:translate-x-40 xl:translate-x-20 object-cover"
       />
     </nav>
   );
