@@ -2,13 +2,13 @@ import React from 'react';
 import CountDown from '../components/Sections/CountDown';
 import Intro from '../components/Sections/Intro';
 import NavbarSignUp from '../components/Sections/NavbarSignUp';
-import SignupForm from '../components/Sections/SignupForm';
+import SignupFooter from '../components/Sections/SignupFooter';
 
 const SignUp = () => {
   return (
-    <section>
+    <section className="relative">
       {/* navigation and timer */}
-      <div>
+      <div className="">
         <div>
           <NavbarSignUp />
         </div>
@@ -21,8 +21,8 @@ const SignUp = () => {
       </div>
 
       {/* contact form and footer */}
-      <div className="mt-20">
-        <SignupForm />
+      <div className="lg:absolute lg:top-0 lg:right-0 lg:w-[420px] lg:h-screen">
+        <SignupFooter />
       </div>
     </section>
   );
