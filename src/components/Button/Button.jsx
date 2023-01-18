@@ -27,6 +27,7 @@ const Button = (props) => {
         applyShadow && 'shadow-shadow-blue-btn',
         styles
       )}
+      type={props.type}
     >
       {props.children}
     </button>
