@@ -3,8 +3,19 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
+import MySelect from '../Input/MySelect';
 
 const SignupForm = () => {
+  let selectedPlan = 'Basic Pack';
+
+  const handlePlanChange = (plan) => {
+    selectedPlan = plan;
+  };
+
+  function formatNumber(inputVal) {
+    let inputNumbersOnly = inputVal.replace(/\D/g, '');
+    return inputNumbersOnly;
+  }
   return (
     <Formik
       initialValues={{
@@ -30,7 +41,7 @@ const SignupForm = () => {
           .required('Company name is required'),
       })}
       onSubmit={(values, { setSubmitting, resetForm }) => {
-        console.log(values);
+        console.log({ ...values, selectedPlan });
         resetForm();
       }}
     >
@@ -56,11 +67,21 @@ const SignupForm = () => {
                 />
               </div>
               <div>
+                <MySelect onChange={handlePlanChange} />
+              </div>
+              <div>
                 <Input
                   label="phone"
                   name="phoneNumber"
                   type="text"
                   placeholder="Phone Number"
+                  maxLength="10"
+                  onChange={(e) => {
+                    formik.setFieldValue(
+                      'phoneNumber',
+                      formatNumber(e.target.value)
+                    );
+                  }}
                 />
               </div>
               <div>
@@ -73,7 +94,9 @@ const SignupForm = () => {
               </div>
             </div>
             <div className="pt-10">
-              <Button btnType="blue">Get on the list</Button>
+              <Button btnType="blue" type="submit">
+                Get on the list
+              </Button>
             </div>
           </Form>
         );
