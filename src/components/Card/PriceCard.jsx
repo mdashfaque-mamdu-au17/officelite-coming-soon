@@ -1,4 +1,5 @@
 import React from 'react';
+
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Heading from '../Texts/Heading';
@@ -7,8 +8,16 @@ import Button from '../Button/Button';
 import BgPattern from '../../assets/home/bg-pattern-pricing.svg';
 
 const PriceCard = (props) => {
-  const { premium, heading, price, billCycle, benefit, storage, support } =
-    props;
+  const {
+    premium,
+    heading,
+    price,
+    billCycle,
+    benefit,
+    storage,
+    support,
+    navigate,
+  } = props;
 
   const commonStyle = () => {
     return 'relative z-20 overflow-hidden w-[327px] rounded-[13px] shadow-card-shadow  sm:w-full sm:max-w-[689px] sm:flex sm:justify-between sm:items-center lg:w-[327px] lg:flex-col lg:justify-center xl:w-[350px]';
@@ -92,7 +101,10 @@ const PriceCard = (props) => {
           </Paragraph>
         </div>
         <div className="w-[171px] mx-auto pt-8 pb-10 sm:hidden lg:block">
-          <Button btnType={!premium ? 'light-blue' : 'white'}>
+          <Button
+            btnType={!premium ? 'light-blue' : 'white'}
+            onClick={navigate}
+          >
             Try for Free
           </Button>
         </div>

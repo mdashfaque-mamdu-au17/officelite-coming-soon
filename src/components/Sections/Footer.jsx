@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import PriceCard from '../Card/PriceCard';
 import TimeCard from '../Card/TimeCard';
 import Button from '../Button/Button';
@@ -6,7 +7,11 @@ import FtPattern from '../../assets/home/bg-pattern-footer.svg';
 import useCountDown from '../../hooks/useCountDown';
 
 const Footer = () => {
+  const navigate = useNavigate();
   const { countdownTime, expiryTime } = useCountDown();
+  const navigateToSignupPage = () => {
+    navigate('/signup');
+  };
   return (
     <section className="relative pt-[794px] sm:pt-[498px] lg:pt-[254px]">
       <section className="absolute top-0 flex flex-col gap-8 w-full  items-center sm:px-10 sm:gap-6 lg:flex-row lg:justify-center xl:gap-[30px]">
@@ -18,6 +23,7 @@ const Footer = () => {
           benefit="Basic document collaboration"
           storage={2}
           support="Great security and support"
+          navigate={navigateToSignupPage}
         />
 
         <PriceCard
@@ -28,6 +34,7 @@ const Footer = () => {
           benefit="All essential integrations"
           storage={50}
           support="More control and insights"
+          navigate={navigateToSignupPage}
         />
 
         <PriceCard
@@ -38,6 +45,7 @@ const Footer = () => {
           benefit="Robust work management"
           storage={100}
           support="VIP support"
+          navigate={navigateToSignupPage}
         />
       </section>
       <footer className="bg-secondary-dark relative h-[1248px] overflow-x-hidden overflow-y-hidden sm:h-[986px] lg:h-[603px]">
@@ -83,7 +91,11 @@ const Footer = () => {
             </div>
 
             <div className="w-[171px] pt-10 sm:pt-12">
-              <Button btnType="blue" applyShadow={false}>
+              <Button
+                btnType="blue"
+                applyShadow={false}
+                onClick={navigateToSignupPage}
+              >
                 Get Started
               </Button>
             </div>
