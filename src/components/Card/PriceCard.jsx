@@ -64,7 +64,10 @@ const PriceCard = (props) => {
           </Paragraph>
         </div>
         <div className="hidden sm:block w-[171px] mx-auto pt-6 pb-12 lg:hidden">
-          <Button btnType={!premium ? 'light-blue' : 'white'}>
+          <Button
+            btnType={!premium ? 'light-blue' : 'white'}
+            onClick={navigate}
+          >
             Try for Free
           </Button>
         </div>
