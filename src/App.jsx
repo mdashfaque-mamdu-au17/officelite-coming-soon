@@ -1,14 +1,26 @@
-import { useState } from 'react';
+import React, { lazy, Suspense } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ErrorPage from './pages/ErrorPage';
 import Home from './pages/Home';
-import SignUp from './pages/SignUp';
+import SignUpFallBack from './pages/SignUpFallBack';
+const SignUp = lazy(() => import('./pages/SignUp'));
+
+const router = createBrowserRouter([
+  { path: '/', element: <Home />, errorElement: <ErrorPage /> },
+  {
+    path: '/signup',
+    element: (
+      <Suspense fallback={<SignUpFallBack />}>
+        <SignUp />
+      </Suspense>
+    ),
+  },
+]);
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div>
-      {/* <Home /> */}
-      <SignUp />
+      <RouterProvider router={router} />
     </div>
   );
 }
