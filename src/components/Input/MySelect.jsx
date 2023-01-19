@@ -45,7 +45,7 @@ const MySelect = ({ onChange }) => {
         </div>
       </div>
       {isSelectOpen && (
-        <div className="bg-white absolute mt-2 z-40 w-full py-6 px-8 rounded-lg border-[1px] border-primary-dark/100/1 shadow-drop-down">
+        <div className="scale-in-center bg-white absolute mt-2 z-40 w-full py-6 px-8 rounded-lg border-[1px] border-primary-dark/100/1 shadow-drop-down ">
           {plans.map((plan, index) => {
             const isLast = plans.length - 1 === index;
             return (
