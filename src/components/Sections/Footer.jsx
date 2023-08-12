@@ -63,7 +63,7 @@ const Footer = () => {
               <div className="text-center lg:text-left">
                 <h5 className="text-primary-white uppercase text-base font-bold leading-[48px] tracking-[5px]">
                   Coming{' '}
-                  <span className="text-primary-blue">5 August 2023</span>
+                  <span className="text-primary-blue">5 November 2023</span>
                 </h5>
               </div>
 

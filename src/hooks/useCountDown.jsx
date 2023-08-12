@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const useCountDown = () => {
-  const [expiryTime, setExpiryTime] = useState('5 August 2023 15:30:25');
+  const [expiryTime, setExpiryTime] = useState('5 November 2023 15:30:25');
   const [countdownTime, setCountdownTime] = useState({
     countdownDays: '',
     countdownHours: '',
