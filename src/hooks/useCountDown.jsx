@@ -8,7 +8,6 @@ const useCountDown = () => {
     countdownMinutes: '',
     countdownSeconds: '',
   });
-  // added comment
   const countdownTimer = () => {
     const timeInterval = setInterval(() => {
       const countdownDateTime = new Date(expiryTime).getTime();
